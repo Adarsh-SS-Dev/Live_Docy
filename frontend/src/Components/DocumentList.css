@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --bg: #f8f9fc;
+  --card-bg: #ffffff;
+  --border: #e2e8f0;
+  --text: #1a202c;
+  --muted: #6b7280;
+  --primary: #10b981;
+  --primary-hover: #059669;
+  --danger: #ef4444;
+  --danger-bg: #fee2e2;
+  --danger-hover: #fecaca;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  margin: 0;
+  padding: 0;
+  padding-right: 500px;
+}
+
+.document-page {
+  min-height: 100vh;
+  background-color: var(--bg);
+  padding: 40px 24px;
+}
+
+.document-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.document-header h2 {
+  font-size: 1.8rem;
+  color: var(--text);
+  font-weight: 700;
+  margin: 0;
+}
+
+.btn-create {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-create:hover {
+  background-color: var(--primary-hover);
+}
+
+.document-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* Two equal-width columns */
+  gap: 24px;
+}
+
+.document-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.document-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.document-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.doc-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-edit {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.btn-edit:hover {
+  background-color: #bfdbfe;
+}
+
+.btn-delete {
+  background-color: var(--danger-bg);
+  color: var(--danger);
+}
+
+.btn-delete:hover {
+  background-color: var(--danger-hover);
+}
+
+/* Responsive fallback: one column on small screens */
+@media (max-width: 640px) {
+  .document-list {
+    grid-template-columns: 1fr;
+  }
+}
+/* Make the outer wrapper stretch the entire viewport width */
+.document-container {
+  width: 100%;
+  max-width: none;      /* ⬅️ removes the 960 / 1200px cap */
+  margin: 0;            /* keep it flush with the screen */
+  padding: 0;           /* optional: drop side padding if you like */
+}

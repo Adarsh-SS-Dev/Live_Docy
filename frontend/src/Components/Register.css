@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --bg:        #f8f9fc;
+  --card-bg:   #ffffff;
+  --border:    #e2e8f0;
+  --text:      #1a202c;
+  --subtle:    #6b7280;
+  --primary:   #6366f1;
+  --primary-hover: #4f46e5;
+  --radius:    12px;
+  --shadow:    0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.register-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.register-container {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+/* -------- Card -------- */
+.register-card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.register-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--primary);
+}
+
+/* -------- Form -------- */
+.register-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #f9fafb;
+  color: var(--text);
+}
+
+.input:focus {
+  outline: 2px solid var(--primary);
+}
+
+/* -------- Button -------- */
+/* -------- Button -------- */
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--primary);     /* purple background */
+  color: #fff;                          /* 🔥 white text */
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover); /* slightly darker purple */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+
+/* -------- Switch link -------- */
+.switch-auth {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: var(--subtle);
+  text-align: center;
+}
+
+.switch-link {
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.switch-link:hover {
+  text-decoration: underline;
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 480px) {
+  .register-card {
+    padding: 24px;
+  }
+}
